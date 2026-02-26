@@ -11,7 +11,7 @@ class Switchboard < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/daltoniam/switchboard/releases/download/v0.1.0/switchboard_0.1.0_darwin_amd64.tar.gz"
-      sha256 "7ca99e5bc094351084f2c084f0666d34e2074c731d855f21f2112177612de952"
+      sha256 "92ab11ae642bfb31f5f7c82f634080359ab3029df641f6b5fb0fa32d0d22ed72"
 
       define_method(:install) do
         bin.install "switchboard"
@@ -19,7 +19,7 @@ class Switchboard < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/daltoniam/switchboard/releases/download/v0.1.0/switchboard_0.1.0_darwin_arm64.tar.gz"
-      sha256 "6a92397a025fe4aecf28cc216df3d36558507e3e4b274b269a78e322f89ce8be"
+      sha256 "1e78a3fd6ae267f3ca65761288e9a0aed6fab790aa5c68b82ca6f0ae7b80efdd"
 
       define_method(:install) do
         bin.install "switchboard"
@@ -30,14 +30,14 @@ class Switchboard < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/daltoniam/switchboard/releases/download/v0.1.0/switchboard_0.1.0_linux_amd64.tar.gz"
-      sha256 "a4341f46ba7b15d0eb06e9abe1bd81a5c756decd62c31eb6f3d3ab5a1e5281de"
+      sha256 "8e13eaaf1fab539b455683348ff716d1a689cdcdc676aeeb24f14a90a36e3654"
       define_method(:install) do
         bin.install "switchboard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/daltoniam/switchboard/releases/download/v0.1.0/switchboard_0.1.0_linux_arm64.tar.gz"
-      sha256 "8aa988d00ab22c943246744f0b9772fedd84d1c575ca8e6b657e71b5f26157c7"
+      sha256 "2a1c52042c5bf6b971ff773bb76ae009afa564ea43accae6ec4aeb0d929120c7"
       define_method(:install) do
         bin.install "switchboard"
       end

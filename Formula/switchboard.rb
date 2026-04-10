@@ -5,21 +5,21 @@
 class Switchboard < Formula
   desc "Unified MCP server aggregating 17+ integrations (GitHub, Datadog, Linear, Slack, AWS, GCP, and more) behind a single endpoint"
   homepage "https://github.com/daltoniam/switchboard"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/daltoniam/switchboard/releases/download/v0.2.1/switchboard_0.2.1_darwin_amd64.tar.gz"
-      sha256 "c6452124976d80be73181384a9424a4e3b7f13229a1e014e9b14f8ad7f42b114"
+      url "https://github.com/daltoniam/switchboard/releases/download/v0.2.2/switchboard_0.2.2_darwin_amd64.tar.gz"
+      sha256 "508d0da696fd81b48b6b1fa33c21d846cf5fdc56e6e35eb800223f630afdb135"
 
       define_method(:install) do
         bin.install "switchboard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/daltoniam/switchboard/releases/download/v0.2.1/switchboard_0.2.1_darwin_arm64.tar.gz"
-      sha256 "79f04eb03cf18c9b05c733f2c63d2b8d3cd31840f17b796b3c0ee726e3e99514"
+      url "https://github.com/daltoniam/switchboard/releases/download/v0.2.2/switchboard_0.2.2_darwin_arm64.tar.gz"
+      sha256 "0f017b641cbbc58dfe921825a0fdefe067012bc9181c305c3ea701ae66dd15e3"
 
       define_method(:install) do
         bin.install "switchboard"
@@ -29,15 +29,15 @@ class Switchboard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daltoniam/switchboard/releases/download/v0.2.1/switchboard_0.2.1_linux_amd64.tar.gz"
-      sha256 "903b805bed4e71de3240124a8b84c57860ed3cf284b357da9a8bf3e1faa4482e"
+      url "https://github.com/daltoniam/switchboard/releases/download/v0.2.2/switchboard_0.2.2_linux_amd64.tar.gz"
+      sha256 "0e56df93a6cfda54c8ad85938039435ce3bed2bdc99fc8bdef81c883b3f975b0"
       define_method(:install) do
         bin.install "switchboard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daltoniam/switchboard/releases/download/v0.2.1/switchboard_0.2.1_linux_arm64.tar.gz"
-      sha256 "1a22244a53c546f4bcc1a79b37159a720c6f3b9b589ff4bf343665d7f607dcae"
+      url "https://github.com/daltoniam/switchboard/releases/download/v0.2.2/switchboard_0.2.2_linux_arm64.tar.gz"
+      sha256 "5a12a58d79ca2c0149b0fee473958f092c250cd7ca390a8924f5249e270931a5"
       define_method(:install) do
         bin.install "switchboard"
       end

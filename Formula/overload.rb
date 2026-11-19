@@ -5,23 +5,23 @@
 class Overload < Formula
   desc "Self-hosted AI pull request reviews and scheduled agent jobs"
   homepage "https://github.com/daltoniam/overload"
-  version "0.6.3"
+  version "0.7.0"
   license "Apache-2.0"
 
   depends_on "postgresql@17"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/daltoniam/overload/releases/download/v0.6.3/overload_darwin_amd64.tar.gz"
-      sha256 "456a9353eb7745438d96c12a58debc7066f911925f579d322d36c2656c30ee80"
+      url "https://github.com/daltoniam/overload/releases/download/v0.7.0/overload_darwin_amd64.tar.gz"
+      sha256 "8be909180c1a10e38930a5903a8b2983c4f36b35f9740a187037347b0b4620b6"
 
       define_method(:install) do
         bin.install "overload"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/daltoniam/overload/releases/download/v0.6.3/overload_darwin_arm64.tar.gz"
-      sha256 "d37c775b9bb1481141ea42c7869dc4676f0dd5703611723b7e1a627be719cd34"
+      url "https://github.com/daltoniam/overload/releases/download/v0.7.0/overload_darwin_arm64.tar.gz"
+      sha256 "43d8860fa1d95b9445173a78495cc1d1d79cfa65634c9be38860e5777e696224"
 
       define_method(:install) do
         bin.install "overload"
@@ -31,15 +31,15 @@ class Overload < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daltoniam/overload/releases/download/v0.6.3/overload_linux_amd64.tar.gz"
-      sha256 "f34a6ee2704b10c665dcacd9bc22711b9409a4e41f803f6da252783b7fe5143e"
+      url "https://github.com/daltoniam/overload/releases/download/v0.7.0/overload_linux_amd64.tar.gz"
+      sha256 "eab201c215737bb332950cd513150effbba29e44d5faadb9c475401efbe6459a"
       define_method(:install) do
         bin.install "overload"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daltoniam/overload/releases/download/v0.6.3/overload_linux_arm64.tar.gz"
-      sha256 "f64932b89d006d2836ac0a9183e9e597d7a82a5bb95f9f17aa14846f6c20f8c0"
+      url "https://github.com/daltoniam/overload/releases/download/v0.7.0/overload_linux_arm64.tar.gz"
+      sha256 "8af0c1c59acc1b66297750cac71dace566596ca383f60d149d41dcc3a5638185"
       define_method(:install) do
         bin.install "overload"
       end
